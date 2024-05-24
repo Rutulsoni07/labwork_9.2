@@ -1,0 +1,85 @@
+Q.2 Write a Program to create a login mechanism by entering the right email & password. You can compare it with your desired email & password.
+For example,
+Input:
+Enter your email: admin@gmail.com
+Enter your password: 123456
+
+Output:
+Login Successful...
+
+-----------------------------------------
+
+For example,
+Input:
+Enter your email: xyz@gmail.com
+Enter your password: 123456
+
+Output:
+Login Failed. Invalid Credentials.
+
+
+input==
+
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+int hasemail=0;
+ int haspassword=0;
+ char e[200]="admin@gmail.com";
+ char p[200] ="123456";
+ char em[200];
+char  pa[200];
+ 
+ printf("Enter your Email:");
+ scanf("%s",em);
+ printf("Enter your password:");
+ scanf("%s",pa);
+ 
+ for(int i=0; em[i]!='\0';i++){
+     if (e[i]==em[i]){
+         hasemail=1;
+     }
+     else{
+         hasemail=0;
+     }
+ }
+ 
+ for (int i=0; pa[i] !='\0';i++){
+     if(p[i] == pa[i]){
+         haspassword=1;
+     }
+     else{
+         haspassword=0;
+     }
+ }
+  if( hasemail == 1){
+      printf("Login Successful...");
+  }
+  else{
+      printf(" Invalid Credentials.");
+  }
+    return 0;
+}
+      
+output==
+Enter your Email:admin@gmail.com
+Enter your password:123456
+Login Successful...
+
+
+     Enter your Email:xyz@gmail.com
+Enter your password:123456
+ Invalid Credentials. 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  
